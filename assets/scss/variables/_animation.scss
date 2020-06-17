@@ -1,0 +1,12 @@
+// variables
+$time: .2s;
+$function: ease;
+
+// default
+$transition-default: all $time $function;
+
+$transition-page: opacity $time $function, transform $time $function;
+$transition-modal: $transition-default;
+$transition-button: $transition-default;
+$transition-link: color $time $function;
+$transition-field: $transition-default;

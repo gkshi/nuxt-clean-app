@@ -1,0 +1,16 @@
+$font-family-default: '', 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-secondary: '', 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+$font-size-default-value: 16; // for font size mixins in /assets/scss/mixins.scss
+
+$font-size-heading: 32px;
+$font-size-default: #{$font-size-default-value}px;
+$font-size-small: 13px;
+
+$line-height-heading: 39px;
+$line-height-default: 19px;
+$line-height-small: 15px;
+
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 700;
