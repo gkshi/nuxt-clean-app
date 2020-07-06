@@ -7,6 +7,7 @@ import axios from 'axios'
 import methods from './methods'
 
 const API_BASE_URL = process.env.NUXT_ENV_API_BASE_URL || ''
+const SUCCESS_STATUSES = [200, 204]
 
 export const API = {
   /**
@@ -30,7 +31,7 @@ export const API = {
       method === 'GET' ? options.params = data : options.data = data
 
       axios(options).then(res => {
-        if (res.status === 200) {
+        if (SUCCESS_STATUSES.includes(res.status)) {
           resolve(res.data)
         } else {
           reject(res.data)
