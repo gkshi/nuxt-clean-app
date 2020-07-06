@@ -6,7 +6,7 @@ import axios from 'axios'
 // import Cookie from 'js-cookie'
 import methods from './methods'
 
-const API_URL = process.env.NUXT_ENV_API_URL || ''
+const API_BASE_URL = process.env.NUXT_ENV_API_BASE_URL || ''
 
 export const API = {
   /**
@@ -20,7 +20,7 @@ export const API = {
     return new Promise((resolve, reject) => {
       const options = {
         method,
-        url: `${API_URL}${url}`,
+        url: `${API_BASE_URL}${url}`,
         headers: {
           // Authorization: `Bearer ${Cookie.get('token')}`,
           // 'Content-Type': 'application/json',
