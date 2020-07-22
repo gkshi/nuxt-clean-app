@@ -37,10 +37,12 @@ body {
 }
 
 // router change effect
-.page-enter-active, .page-leave-active {
+.page {
   transition: $transition-page;
+}
+.page-enter-active, .page-leave-active {
   opacity: 0;
-  transform: translate(0, 6px);
+  transform: translate(0, 10px);
 }
 
 // typography

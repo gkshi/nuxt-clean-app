@@ -35,6 +35,9 @@
   &.a-end {
     align-items: flex-end;
   }
+  &.a-base {
+    align-items: baseline;
+  }
   .grow {
     flex-grow: 1;
   }
