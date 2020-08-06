@@ -37,6 +37,6 @@
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^9.0.2",
-    "vue-common-components": "^0.0.15"
+    "vue-common-components": "^0.0.16"
   }
 }
