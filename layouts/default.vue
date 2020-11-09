@@ -1,27 +1,19 @@
 <template lang="pug">
   #app
-    vHeader
+    header-main
     main
       nuxt
-    vFooter
+    footer-main
 </template>
 
 <script>
-import vHeader from '@/components/header'
-import vFooter from '@/components/footer'
-
 export default {
-  components: {
-    vHeader,
-    vFooter
-  }
+  //
 }
 </script>
 
 <style lang="scss" scoped>
-  #app {
-    ::v-deep * {
-      //
-    }
-  }
+::v-deep #app {
+  //
+}
 </style>

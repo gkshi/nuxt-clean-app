@@ -1,40 +1,33 @@
 require('dotenv').config()
 
 export default {
-  mode: 'spa', // universal, spa
+  // Server-side rendering (https://go.nuxtjs.dev/ssr-mode)
+  ssr: false,
 
-  /*
-  ** Server config
-  */
+  // Server config
   server: {
-    port: process.env.NUXT_ENV_SERVER_PORT || '3000',
-    host: process.env.NUXT_ENV_SERVER_HOST || 'localhost',
+    port: process.env.NUXT_ENV_PORT || '3000',
+    host: process.env.NUXT_ENV_HOST || 'localhost',
     timing: false
   },
 
-  /*
-  ** Headers of the page
-  */
+  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'hearthstone',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
+  // Customize the progress-bar color
+  loading: { color: 'blue' },
 
-  /*
-  ** Resources for components
-  */
+  // Global resources for components
   styleResources: {
     scss: [
       '@/assets/scss/variables/_index.scss',
@@ -43,53 +36,44 @@ export default {
     ]
   },
 
-  /*
-  ** Global CSS
-  */
+  // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '@/assets/scss/index.scss'
   ],
 
-  /*
-  ** Plugins to load before mounting the App
-  */
+  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     'node_modules/vue-common-components'
   ],
 
-  /*
-  ** Nuxt.js dev-modules
-  */
+  // Auto import components (https://go.nuxtjs.dev/config-components)
+  components: [
+    '~/components', // shortcut to { path: '~/components' }
+    { path: '~/components/footer/', prefix: 'footer' },
+    { path: '~/components/header/', prefix: 'header' },
+    { path: '~/components/icons/', prefix: 'icon' }
+  ],
+
+  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
+    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources'
   ],
 
-  /*
-  ** Nuxt.js modules
-  */
+  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
+    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
 
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
-  },
+  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
+  axios: {},
 
-  /*
-  ** Build configuration
-  */
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     extend (config, ctx) {
       config.node = {
         fs: 'empty'

@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .page.index {
-    //
-  }
+.page.index {
+  //
+}
 </style>

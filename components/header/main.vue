@@ -1,17 +1,17 @@
 <template lang="pug">
-  footer.footer-component
+  header.header-component
     .wrapper
-      div footer
+      div header
 </template>
 
 <script>
 export default {
-  name: 'footer-component'
+  //
 }
 </script>
 
 <style lang="scss" scoped>
-  .footer-component {
+  .header-component {
     background: $color-light;
   }
 </style>

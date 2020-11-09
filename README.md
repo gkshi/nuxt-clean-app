@@ -1,11 +1,20 @@
-# nuxt-clean-app
+# hearthstone
 
-> Clean nuxt app with common boilerplate
+## Build Setup
 
-## Contents:
+```bash
+# install dependencies
+$ yarn install
 
-* Nuxt.js clean application
-* SCSS boilerplate (reset, valiables, mixins, utils)
-* API core wrapper (axios)
-* Vuex boilerplate + api module
-* Packages: pug, scss, style-resources, eslint, [vue-common-components](https://github.com/gkshi/vue-common-components)
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

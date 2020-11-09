@@ -11,6 +11,9 @@ module.exports = {
     '@nuxtjs',
     'plugin:nuxt/recommended'
   ],
+  plugins: [
+  ],
+  // add your custom rules here
   rules: {
     indent: ['error', 2],
     quotes: ['error', 'single'],
